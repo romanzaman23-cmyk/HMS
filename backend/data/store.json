@@ -22,6 +22,17 @@
       "phone": "+1 555-0199",
       "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
       "is_active": 1
+    },
+    {
+      "id": 2,
+      "role_id": 1,
+      "role_name": "PRINCIPAL_ADMIN",
+      "email": "romanzaman23@gmail.com",
+      "password_hash": "$2a$10$E5/ImsWwdAfMPz06iqQaru3hWGmZtoM6nMrF7ylN/uXgnEFAJPpBu",
+      "full_name": "Roman Zaman",
+      "phone": "+92 300 0000000",
+      "avatar_url": "/uploads/roman_real.png",
+      "is_active": 1
     }
   ],
   "classes": [

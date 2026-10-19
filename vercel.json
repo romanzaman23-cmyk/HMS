@@ -1,7 +1,5 @@
 {
-  "buildCommand": "node -e \"console.log('Build ready in public')\"",
-  "outputDirectory": "public",
-  "cleanUrls": true,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
       "source": "/(.*)",

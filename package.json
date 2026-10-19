@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node run-all.js",
     "dev": "node run-all.js",
-    "build": "cd frontend && npm install && npm run build",
+    "build": "node build-vercel.js",
     "backend": "cd backend && npm start",
     "frontend": "cd frontend && npm run dev"
   }

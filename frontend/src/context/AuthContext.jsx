@@ -23,11 +23,16 @@ export function AuthProvider({ children }) {
             localStorage.setItem('hms_user', JSON.stringify(res.data.user));
           }
         } catch (err) {
-          console.warn('Session expired or error verifying token:', err.message);
-          localStorage.removeItem('hms_token');
-          localStorage.removeItem('hms_user');
-          setUser(null);
-          setToken(null);
+          if (err.response && err.response.status === 401) {
+            console.warn('Session expired (401):', err.message);
+            localStorage.removeItem('hms_token');
+            localStorage.removeItem('hms_user');
+            setUser(null);
+            setToken(null);
+          } else {
+            // Keep existing stored user active in live demo/offline mode
+            console.info('Backend verification offline, running on preserved local session.');
+          }
         }
       }
       setLoading(false);

@@ -6,6 +6,7 @@
   <title>Document Viewer - Highlight Model School</title>
   <script src="/pdfjs/pdf.min.js"></script>
   <script src="/pdfjs/pdf.worker.min.js"></script>
+  <script src="/html2pdf.bundle.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
@@ -45,6 +46,9 @@
       border-radius: 6px;
       letter-spacing: 0.5px;
       text-transform: uppercase;
+    }
+    .badge.cert {
+      background: #173B73;
     }
     .title {
       font-size: 14px;
@@ -106,6 +110,7 @@
     }
     #viewport-container {
       flex: 1;
+      width: 100%;
       overflow-y: auto;
       overflow-x: auto;
       display: flex;
@@ -114,6 +119,14 @@
       padding: 24px 16px;
       background-color: #323639;
       scroll-behavior: smooth;
+    }
+    #pages-container {
+      width: 100%;
+      max-width: 960px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
     }
     .canvas-wrapper {
       background: white;
@@ -145,10 +158,30 @@
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
+    #htmlDocWrap {
+      width: 100%;
+      max-width: 880px;
+      min-width: 320px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+      margin: 0 auto 30px auto;
+      overflow: visible;
+      transform-origin: top center;
+      transition: transform 0.15s ease-out;
+    }
+    #certIframe {
+      width: 100%;
+      min-width: 100%;
+      border: none;
+      display: block;
+      background: #fff;
+      border-radius: 12px;
+    }
     @media print {
       header { display: none !important; }
       body, #viewport-container { background: white !important; padding: 0 !important; overflow: visible !important; }
-      .canvas-wrapper { box-shadow: none !important; margin: 0 !important; page-break-after: always; }
+      .canvas-wrapper, #htmlDocWrap { box-shadow: none !important; margin: 0 !important; page-break-after: always; width: 100% !important; max-width: 100% !important; transform: none !important; }
     }
   </style>
 </head>
@@ -276,7 +309,176 @@
         }
         pdfBytes = bytes;
 
-        // Configure Download button with in-memory blob
+        // Check if file is HTML or Official Certificate
+        const trimmedStr = binaryStr.trim();
+        const isHtml = (json.contentType && json.contentType.includes('html')) ||
+                       (json.fileName && /\.(html|htm)$/i.test(json.fileName)) ||
+                       (docPath && /\.(html|htm)$/i.test(docPath)) ||
+                       trimmedStr.startsWith('<!DOCTYPE') ||
+                       trimmedStr.startsWith('<html') ||
+                       trimmedStr.startsWith('<div');
+
+        if (isHtml) {
+          let htmlText = '';
+          try {
+            htmlText = new TextDecoder('utf-8').decode(bytes);
+          } catch (e) {
+            htmlText = binaryStr;
+          }
+
+          const badgeEl = document.querySelector('.badge');
+          if (badgeEl) {
+            badgeEl.innerText = 'OFFICIAL CERTIFICATE';
+            badgeEl.classList.add('cert');
+          }
+          document.getElementById('pageIndicator').innerText = '1 / 1';
+          document.getElementById('prevBtn').disabled = true;
+          document.getElementById('nextBtn').disabled = true;
+
+          pagesContainer.innerHTML = '';
+          pagesContainer.style.display = 'flex';
+          pagesContainer.style.flexDirection = 'column';
+          pagesContainer.style.alignItems = 'center';
+          pagesContainer.style.padding = '0';
+          pagesContainer.style.width = '100%';
+
+          const iframeWrap = document.createElement('div');
+          iframeWrap.id = 'htmlDocWrap';
+
+          const iframe = document.createElement('iframe');
+          iframe.id = 'certIframe';
+          iframe.style.width = '100%';
+          iframe.style.minHeight = '1120px';
+          iframe.srcdoc = htmlText;
+
+          iframeWrap.appendChild(iframe);
+          pagesContainer.appendChild(iframeWrap);
+          statusEl.style.display = 'none';
+
+          // When iframe loads, inject fixes for layout and compute exact height
+          iframe.onload = () => {
+            try {
+              const idoc = iframe.contentDocument || iframe.contentWindow.document;
+              if (idoc) {
+                const style = idoc.createElement('style');
+                style.textContent = `
+                  html, body {
+                    margin: 0 !important;
+                    padding: 20px !important;
+                    box-sizing: border-box !important;
+                    background: #ffffff !important;
+                    overflow: visible !important;
+                  }
+                  .dmc-frame, .cert-frame, .id-card-frame {
+                    width: 100% !important;
+                    max-width: 840px !important;
+                    margin: 0 auto !important;
+                    box-sizing: border-box !important;
+                  }
+                  .school-name {
+                    white-space: nowrap !important;
+                    font-size: 26px !important;
+                  }
+                  .student-grid {
+                    box-sizing: border-box !important;
+                  }
+                  table {
+                    box-sizing: border-box !important;
+                    width: 100% !important;
+                  }
+                  @media print {
+                    body { padding: 0 !important; }
+                  }
+                `;
+                idoc.head.appendChild(style);
+
+                const autoHeight = () => {
+                  try {
+                    const scrollH = Math.max(idoc.body.scrollHeight, idoc.documentElement.scrollHeight, 1050);
+                    iframe.style.height = (scrollH + 30) + 'px';
+                    iframeWrap.style.height = (scrollH + 30) + 'px';
+                  } catch (_) {}
+                };
+                autoHeight();
+                setTimeout(autoHeight, 300);
+                setTimeout(autoHeight, 800);
+              }
+            } catch (err) {
+              console.warn('Iframe style injection notice:', err);
+            }
+          };
+
+          // Setup Print button
+          const printBtn = document.getElementById('printBtn');
+          if (printBtn) {
+            printBtn.onclick = (e) => {
+              e.preventDefault();
+              try {
+                iframe.contentWindow.focus();
+                iframe.contentWindow.print();
+              } catch (err) {
+                window.print();
+              }
+            };
+          }
+
+          // Setup Download PDF button with html2pdf
+          const downloadBtn = document.getElementById('downloadBtn');
+          downloadBtn.removeAttribute('href');
+          downloadBtn.style.cursor = 'pointer';
+          downloadBtn.innerHTML = '&#128190; Download PDF';
+          downloadBtn.onclick = async (e) => {
+            e.preventDefault();
+            const originalText = downloadBtn.innerHTML;
+            downloadBtn.innerHTML = '&#9203; Generating PDF...';
+            downloadBtn.style.pointerEvents = 'none';
+
+            try {
+              const idoc = iframe.contentDocument || iframe.contentWindow.document;
+              const targetNode = idoc.querySelector('.dmc-frame') || 
+                                 idoc.querySelector('.cert-frame') || 
+                                 idoc.querySelector('.id-card-frame') || 
+                                 idoc.body;
+
+              const cleanBaseTitle = (docTitle || 'Certificate')
+                .replace(/[\/\\:*?"<>|]/g, '_')
+                .replace(/\.html$/i, '')
+                .trim();
+              const pdfFileName = cleanBaseTitle + '.pdf';
+
+              if (window.html2pdf) {
+                const opt = {
+                  margin: [8, 8, 8, 8],
+                  filename: pdfFileName,
+                  image: { type: 'jpeg', quality: 0.98 },
+                  html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false,
+                    windowWidth: 880
+                  },
+                  jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                };
+                await window.html2pdf().set(opt).from(targetNode).save();
+              } else {
+                iframe.contentWindow.focus();
+                iframe.contentWindow.print();
+              }
+            } catch (pdfErr) {
+              console.error('PDF export error:', pdfErr);
+              alert('Could not generate PDF directly (' + pdfErr.message + '). Opening print dialog.');
+              iframe.contentWindow.focus();
+              iframe.contentWindow.print();
+            } finally {
+              downloadBtn.innerHTML = originalText;
+              downloadBtn.style.pointerEvents = 'auto';
+            }
+          };
+
+          return;
+        }
+
+        // Configure Download button with in-memory blob for standard PDF files
         const blob = new Blob([bytes], { type: 'application/pdf' });
         const blobUrl = URL.createObjectURL(blob);
         const downloadBtn = document.getElementById('downloadBtn');
@@ -307,6 +509,16 @@
       document.getElementById('prevBtn').disabled = (activePage <= 1);
       document.getElementById('nextBtn').disabled = (activePage >= pdfDoc.numPages);
       document.getElementById('zoomResetBtn').innerText = Math.round(currentScale * 100) + '%';
+    }
+
+    function applyZoom() {
+      document.getElementById('zoomResetBtn').innerText = Math.round(currentScale * 100) + '%';
+      const htmlWrap = document.getElementById('htmlDocWrap');
+      if (htmlWrap) {
+        htmlWrap.style.transform = `scale(${currentScale})`;
+      } else if (pdfDoc) {
+        renderAllPages();
+      }
     }
 
     async function renderAllPages() {
@@ -394,20 +606,17 @@
 
     document.getElementById('zoomInBtn').onclick = () => {
       currentScale = Math.min(currentScale + 0.2, 3.0);
-      updatePageIndicator();
-      renderAllPages();
+      applyZoom();
     };
 
     document.getElementById('zoomOutBtn').onclick = () => {
       currentScale = Math.max(currentScale - 0.2, 0.5);
-      updatePageIndicator();
-      renderAllPages();
+      applyZoom();
     };
 
     document.getElementById('zoomResetBtn').onclick = () => {
       currentScale = 1.15;
-      updatePageIndicator();
-      renderAllPages();
+      applyZoom();
     };
 
     document.getElementById('printBtn').onclick = () => {

@@ -1,6 +1,7 @@
 {
-  "buildCommand": "cd frontend && npm install && npm run build",
-  "outputDirectory": "frontend/dist",
+  "buildCommand": "node -e \"console.log('Build ready in public')\"",
+  "outputDirectory": "public",
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/(.*)",

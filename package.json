@@ -1,0 +1,12 @@
+{
+  "name": "highlight-model-school-management",
+  "version": "1.0.0",
+  "description": "Highlight Model School - Management System Root",
+  "scripts": {
+    "start": "node run-all.js",
+    "dev": "node run-all.js",
+    "build": "cd frontend && npm install && npm run build",
+    "backend": "cd backend && npm start",
+    "frontend": "cd frontend && npm run dev"
+  }
+}

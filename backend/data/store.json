@@ -1,0 +1,1067 @@
+{
+  "roles": [
+    {
+      "id": 1,
+      "name": "PRINCIPAL_ADMIN",
+      "description": "School Principal & Admin"
+    },
+    {
+      "id": 2,
+      "name": "PARENT",
+      "description": "Parent / Guardian"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "role_id": 1,
+      "role_name": "PRINCIPAL_ADMIN",
+      "email": "admin@highlight.school",
+      "password_hash": "$2a$10$i.qhNJNsqkmnv1vyliuhLO1zwzWjydj/w7wdt1snYSEGEGV882/fe",
+      "full_name": "Admin Principal",
+      "phone": "+1 555-0199",
+      "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "is_active": 1
+    }
+  ],
+  "classes": [
+    {
+      "id": 1,
+      "name": "Nursery",
+      "section": "A",
+      "room_number": "Room 101",
+      "capacity": 30
+    },
+    {
+      "id": 2,
+      "name": "Prep",
+      "section": "A",
+      "room_number": "Room 102",
+      "capacity": 30
+    },
+    {
+      "id": 3,
+      "name": "Grade 1",
+      "section": "A",
+      "room_number": "Room 103",
+      "capacity": 30
+    },
+    {
+      "id": 4,
+      "name": "Grade 2",
+      "section": "A",
+      "room_number": "Room 104",
+      "capacity": 30
+    },
+    {
+      "id": 5,
+      "name": "Grade 3",
+      "section": "A",
+      "room_number": "Room 105",
+      "capacity": 30
+    },
+    {
+      "id": 6,
+      "name": "Grade 4",
+      "section": "A",
+      "room_number": "Room 106",
+      "capacity": 30
+    },
+    {
+      "id": 7,
+      "name": "Grade 5",
+      "section": "A",
+      "room_number": "Room 201",
+      "capacity": 35
+    },
+    {
+      "id": 8,
+      "name": "Grade 6",
+      "section": "A",
+      "room_number": "Room 202",
+      "capacity": 35
+    },
+    {
+      "id": 9,
+      "name": "Grade 7",
+      "section": "A",
+      "room_number": "Room 203",
+      "capacity": 35
+    },
+    {
+      "id": 10,
+      "name": "Grade 8",
+      "section": "A",
+      "room_number": "Room 204",
+      "capacity": 35
+    },
+    {
+      "id": 11,
+      "name": "Grade 9",
+      "section": "A",
+      "room_number": "Room 301",
+      "capacity": 40
+    },
+    {
+      "id": 12,
+      "name": "Grade 10",
+      "section": "A",
+      "room_number": "Room 302",
+      "capacity": 40
+    }
+  ],
+  "parents": [],
+  "students": [
+    {
+      "id": 1792156410934,
+      "serial_no": "SR-9607",
+      "admission_date": "2026-10-16",
+      "parent_id": 1792156410935,
+      "parent_user_id": 1792156410937,
+      "parent_email": "romanzaman23@gmail.com",
+      "parent_name": "Khalid",
+      "father_name": "Khalid",
+      "father_name_urdu": "",
+      "parent_phone": "0300-1234567",
+      "class_id": 5,
+      "class_name": "Grade 3",
+      "roll_number": "HMS-679",
+      "full_name": "Roman",
+      "student_name_urdu": "",
+      "gender": "Male",
+      "dob": "2018-03-10",
+      "date_of_birth": "2018-03-10",
+      "dob_words": "",
+      "caste_tribe": "",
+      "father_occupation": "",
+      "residence": "Highlight Model School Area, Islamabad",
+      "address": "Highlight Model School Area, Islamabad",
+      "arrears_due": "0",
+      "class_withdrawn": "",
+      "withdrawal_date": "",
+      "remarks": "",
+      "admission_type": "Fresh / New Student",
+      "prev_school": "Highlight Junior Wing (Fresh Admission)",
+      "fingerprint_device_id": "FP-313",
+      "status": "Active",
+      "avatar_url": "/uploads/student_avatar_1792156410934_1792156469549.jpg"
+    }
+  ],
+  "devices": [
+    {
+      "id": 1,
+      "device_name": "ZKTeco F18",
+      "ip_address": "192.168.1.201",
+      "port": 4370,
+      "device_uid": "123456",
+      "location": "Main Gate",
+      "connection_status": "Connected",
+      "last_sync_time": "2026-10-07T18:54:22.786Z",
+      "is_active": 1
+    }
+  ],
+  "device_logs": [],
+  "attendance": [],
+  "announcements": [
+    {
+      "id": 1792155511259,
+      "title": "saba choty d ",
+      "description": "saba choty d ma razy ",
+      "announcement_date": "2026-10-16",
+      "status": "Published",
+      "author_id": 1,
+      "author_name": "Admin Principal"
+    }
+  ],
+  "results": [
+    {
+      "id": 1792159037549,
+      "student_id": 1792156410934,
+      "class_id": 1,
+      "term": "Term 1 (2025-26)",
+      "subject": "English",
+      "marks": 55,
+      "total_marks": 100,
+      "grade": "C",
+      "overall_performance": "Very Good",
+      "result_date": "2026-10-16"
+    },
+    {
+      "id": 1792159037550,
+      "student_id": 1792156410934,
+      "class_id": 1,
+      "term": "Term 1 (2025-26)",
+      "subject": "Urdu",
+      "marks": 88,
+      "total_marks": 100,
+      "grade": "A",
+      "overall_performance": "Very Good",
+      "result_date": "2026-10-16"
+    },
+    {
+      "id": 1792159037551,
+      "student_id": 1792156410934,
+      "class_id": 1,
+      "term": "Term 1 (2025-26)",
+      "subject": "Mathematics",
+      "marks": 65,
+      "total_marks": 100,
+      "grade": "B",
+      "overall_performance": "Very Good",
+      "result_date": "2026-10-16"
+    },
+    {
+      "id": 1792159037552,
+      "student_id": 1792156410934,
+      "class_id": 1,
+      "term": "Term 1 (2025-26)",
+      "subject": "General Science",
+      "marks": 98,
+      "total_marks": 100,
+      "grade": "A+",
+      "overall_performance": "Very Good",
+      "result_date": "2026-10-16"
+    },
+    {
+      "id": 1792159037553,
+      "student_id": 1792156410934,
+      "class_id": 1,
+      "term": "Term 1 (2025-26)",
+      "subject": "Islamiat",
+      "marks": 78,
+      "total_marks": 100,
+      "grade": "B+",
+      "overall_performance": "Very Good",
+      "result_date": "2026-10-16"
+    },
+    {
+      "id": 1792159037554,
+      "student_id": 1792156410934,
+      "class_id": 1,
+      "term": "Term 1 (2025-26)",
+      "subject": "Social Studies",
+      "marks": 55,
+      "total_marks": 100,
+      "grade": "C",
+      "overall_performance": "Very Good",
+      "result_date": "2026-10-16"
+    },
+    {
+      "id": 1792159037555,
+      "student_id": 1792156410934,
+      "class_id": 1,
+      "term": "Term 1 (2025-26)",
+      "subject": "Computer Studies",
+      "marks": 88,
+      "total_marks": 100,
+      "grade": "A",
+      "overall_performance": "Very Good",
+      "result_date": "2026-10-16"
+    }
+  ],
+  "result_documents": [
+    {
+      "id": 1792159708369,
+      "student_id": 1792156410934,
+      "student_name": "Roman",
+      "roll_number": "HMS-679",
+      "class_name": "Grade 3",
+      "title": "Detailed Marks Certificate (DMC) - Roman",
+      "category": "Detailed Marks Certificate",
+      "file_path": "/uploads/dmc_1792156410934_1792159708368.html",
+      "file_size_formatted": "9 KB",
+      "file_type": "text/html",
+      "uploaded_at": "2026-10-16",
+      "term": "Term 1 (2025-26)"
+    },
+    {
+      "title": "71a0919d-38bd-4994-9cff-e13bdb5e9109.png",
+      "file_path": "/uploads/71a0919d-38bd-4994-9cff-e13bdb5e9109-1792159037309.png",
+      "file_size_formatted": "7.1 MB",
+      "file_type": "image/png",
+      "term": "Term 1 (2025-26)",
+      "id": 1792159038549,
+      "student_id": 1792156410934,
+      "student_name": "Roman",
+      "class_name": "Grade 2",
+      "uploaded_at": "2026-10-16T13:57:17.549Z"
+    }
+  ],
+  "student_documents": [
+    {
+      "id": 1792159708368,
+      "student_id": 1792156410934,
+      "student_name": "Roman",
+      "roll_number": "HMS-679",
+      "class_name": "Grade 3",
+      "title": "Detailed Marks Certificate (DMC) - Roman",
+      "category": "Detailed Marks Certificate",
+      "file_path": "/uploads/dmc_1792156410934_1792159708368.html",
+      "file_size_formatted": "9 KB",
+      "file_type": "text/html",
+      "uploaded_at": "2026-10-16",
+      "term": "Term 1 (2025-26)"
+    },
+    {
+      "id": 1792157912055,
+      "student_id": 1792156410934,
+      "student_name": "Roman",
+      "roll_number": "HMS-679",
+      "class_name": "Grade 1",
+      "title": "Official Student ID Card - Roman (Roll HMS-679)",
+      "category": "Student ID Card",
+      "file_path": "/uploads/student_id_card_1792156410934_1792157912054.html",
+      "file_size_formatted": "5 KB",
+      "file_type": "text/html",
+      "uploaded_by": 1,
+      "uploaded_at": "2026-10-16"
+    },
+    {
+      "id": 1792157903193,
+      "student_id": 1792156410934,
+      "student_name": "Roman",
+      "roll_number": "HMS-679",
+      "class_name": "Grade 1",
+      "title": "Date of Birth Certificate - Roman (Roll HMS-679)",
+      "category": "Birth Certificate",
+      "file_path": "/uploads/birth_certificate_1792156410934_1792157903192.html",
+      "file_size_formatted": "5 KB",
+      "file_type": "text/html",
+      "uploaded_by": 1,
+      "uploaded_at": "2026-10-16"
+    }
+  ],
+  "leave_requests": [
+    {
+      "id": 1792158914007,
+      "student_id": 1792156410934,
+      "student_name": "Roman",
+      "roll_number": "HMS-679",
+      "class_name": "Grade 1",
+      "parent_id": 1792156410935,
+      "parent_name": "Khalid",
+      "parent_phone": "0300-1234567",
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-17",
+      "reason": "Medical / Sickness",
+      "additional_details": "Testing",
+      "attachment_url": null,
+      "status": "Approved",
+      "submitted_at": "2026-10-16",
+      "admin_remarks": "Approved by Principal",
+      "reviewed_at": "2026-10-16T13:55:45.490Z"
+    },
+    {
+      "id": 1792156568318,
+      "student_id": 1792156410934,
+      "student_name": "Roman",
+      "roll_number": "HMS-679",
+      "class_name": "Grade 1",
+      "parent_id": 1792156410935,
+      "parent_name": "Khalid",
+      "parent_phone": "0300-1234567",
+      "start_date": "2026-10-18",
+      "end_date": "2026-10-20",
+      "reason": "Urgent Family Function / ضروری گھریلو تقریب",
+      "additional_details": "We have to attend an urgent family event in our hometown. Please grant leave for 3 days.",
+      "attachment_url": null,
+      "status": "Rejected",
+      "submitted_at": "2026-10-16",
+      "admin_remarks": "Declined by Administration",
+      "reviewed_at": "2026-10-16T13:55:40.585Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1792159039549,
+      "user_id": 1792156410937,
+      "title": "🎉 Mubarak! Student Promoted to Next Class",
+      "message": "Mubarak ho! Roman ne Term 1 (2025-26) pass kar liya hai (75% • Grade B+) aur agli class \"Grade 3\" me promote ho gaye hain!",
+      "type": "Promotion",
+      "is_read": 0,
+      "action_url": "/parent/results",
+      "created_at": "2026-10-16T13:57:17.549Z"
+    },
+    {
+      "id": 1792158986102,
+      "user_id": 1792156410937,
+      "title": "🎉 Mubarak! Student Promoted to Next Class",
+      "message": "Mubarak ho! Roman ne Term 1 (2025-26) pass kar liya hai (75% • Grade B+) aur agli class \"Grade 2\" me promote ho gaye hain!",
+      "type": "Promotion",
+      "is_read": 0,
+      "action_url": "/parent/results",
+      "created_at": "2026-10-16T13:56:24.721Z"
+    },
+    {
+      "id": 1792158945491,
+      "user_id": 2,
+      "title": "Leave Request Approved",
+      "message": "Your leave request for Roman (2026-10-16) has been approved.",
+      "type": "Leave Status",
+      "is_read": 0,
+      "action_url": "/parent/leave-request",
+      "created_at": "2026-10-16T13:55:45.491Z"
+    },
+    {
+      "id": 1792158940585,
+      "user_id": 2,
+      "title": "Leave Request Update",
+      "message": "Your leave request for Roman has been rejected.",
+      "type": "Leave Status",
+      "is_read": 0,
+      "action_url": "/parent/leave-request",
+      "created_at": "2026-10-16T13:55:40.585Z"
+    },
+    {
+      "id": 1792158914008,
+      "user_id": 1,
+      "title": "New Leave Request Received",
+      "message": "New leave request submitted for Roman (Grade 1, Roll: HMS-679): Medical / Sickness",
+      "type": "Leave Request",
+      "is_read": 0,
+      "action_url": "/admin/leave-management",
+      "created_at": "2026-10-16T13:55:14.007Z"
+    },
+    {
+      "id": 1792157912056,
+      "user_id": 1792156410937,
+      "title": "Official Document Issued",
+      "message": "Official Student ID Card has been issued for Roman. It is now available in your portal and mobile app.",
+      "type": "Document",
+      "is_read": 0,
+      "action_url": "/parent/documents",
+      "created_at": "2026-10-16T13:38:32.055Z"
+    },
+    {
+      "id": 1792157903194,
+      "user_id": 1792156410937,
+      "title": "Official Document Issued",
+      "message": "Official Birth Certificate has been issued for Roman. It is now available in your portal and mobile app.",
+      "type": "Document",
+      "is_read": 0,
+      "action_url": "/parent/documents",
+      "created_at": "2026-10-16T13:38:23.193Z"
+    },
+    {
+      "id": 1792156568319,
+      "user_id": 1,
+      "title": "New Leave Request Received",
+      "message": "New leave request submitted for Roman (Grade 1, Roll: HMS-679): Urgent Family Function / ضروری گھریلو تقریب",
+      "type": "Leave Request",
+      "is_read": 0,
+      "action_url": "/admin/leave-management",
+      "created_at": "2026-10-16T13:16:08.318Z"
+    },
+    {
+      "id": 1792155511259,
+      "user_id": 2,
+      "title": "New Announcement",
+      "message": "A new announcement has been posted: saba choty d ",
+      "type": "Announcement",
+      "is_read": 0,
+      "action_url": "/parent/announcements",
+      "created_at": "2026-10-16T12:58:31.259Z"
+    },
+    {
+      "id": 1792155447986,
+      "user_id": 1792104861339,
+      "title": "🎉 Mubarak! Student Promoted to Next Class",
+      "message": "Mubarak ho! ROMAN ne Term 1 (2025-26) pass kar liya hai (79% • Grade B+) aur agli class \"Grade 2\" me promote ho gaye hain!",
+      "type": "Promotion",
+      "is_read": 0,
+      "action_url": "/parent/results",
+      "created_at": "2026-10-16T12:57:25.986Z"
+    },
+    {
+      "id": 1792155380554,
+      "user_id": 1792104861339,
+      "title": "Official Document Issued",
+      "message": "Official Birth Certificate has been issued for ROMAN. It is now available in your portal and mobile app.",
+      "type": "Document",
+      "is_read": 0,
+      "action_url": "/parent/documents",
+      "created_at": "2026-10-16T12:56:20.553Z"
+    },
+    {
+      "id": 1792155330404,
+      "user_id": 1792155071521,
+      "title": "Class Timetable Updated",
+      "message": "The weekly timetable for Grade 1 has been updated by the administration. Check the Timetable tab in your app.",
+      "type": "Timetable",
+      "is_read": 0,
+      "action_url": "/timetable",
+      "created_at": "2026-10-16T12:55:30.254Z"
+    },
+    {
+      "id": 1792155331152,
+      "user_id": 1792152569009,
+      "title": "Class Timetable Updated",
+      "message": "The weekly timetable for Grade 1 has been updated by the administration. Check the Timetable tab in your app.",
+      "type": "Timetable",
+      "is_read": 0,
+      "action_url": "/timetable",
+      "created_at": "2026-10-16T12:55:30.254Z"
+    },
+    {
+      "id": 1792155330542,
+      "user_id": 1792135235649,
+      "title": "Class Timetable Updated",
+      "message": "The weekly timetable for Grade 1 has been updated by the administration. Check the Timetable tab in your app.",
+      "type": "Timetable",
+      "is_read": 0,
+      "action_url": "/timetable",
+      "created_at": "2026-10-16T12:55:30.254Z"
+    },
+    {
+      "id": 1792155330430,
+      "user_id": 1792105809418,
+      "title": "Class Timetable Updated",
+      "message": "The weekly timetable for Grade 1 has been updated by the administration. Check the Timetable tab in your app.",
+      "type": "Timetable",
+      "is_read": 0,
+      "action_url": "/timetable",
+      "created_at": "2026-10-16T12:55:30.254Z"
+    },
+    {
+      "id": 1792155330379,
+      "user_id": 1792104861339,
+      "title": "Class Timetable Updated",
+      "message": "The weekly timetable for Grade 1 has been updated by the administration. Check the Timetable tab in your app.",
+      "type": "Timetable",
+      "is_read": 0,
+      "action_url": "/timetable",
+      "created_at": "2026-10-16T12:55:30.254Z"
+    },
+    {
+      "id": 1792155282888,
+      "user_id": 1792104861339,
+      "title": "Official Document Issued",
+      "message": "Official Detailed Marks Certificate has been issued for ROMAN. It is now available in your portal and mobile app.",
+      "type": "Document",
+      "is_read": 0,
+      "action_url": "/parent/documents",
+      "created_at": "2026-10-16T12:54:42.887Z"
+    },
+    {
+      "id": 1792155280510,
+      "user_id": 1792104861339,
+      "title": "Official Document Issued",
+      "message": "Official School Leaving Certificate has been issued for ROMAN. It is now available in your portal and mobile app.",
+      "type": "Document",
+      "is_read": 0,
+      "action_url": "/parent/documents",
+      "created_at": "2026-10-16T12:54:40.509Z"
+    },
+    {
+      "id": 1792155278025,
+      "user_id": 1792104861339,
+      "title": "Official Document Issued",
+      "message": "Official Student ID Card has been issued for ROMAN. It is now available in your portal and mobile app.",
+      "type": "Document",
+      "is_read": 0,
+      "action_url": "/parent/documents",
+      "created_at": "2026-10-16T12:54:38.024Z"
+    },
+    {
+      "id": 1792155274908,
+      "user_id": 1792104861339,
+      "title": "Official Document Issued",
+      "message": "Official Birth Certificate has been issued for ROMAN. It is now available in your portal and mobile app.",
+      "type": "Document",
+      "is_read": 0,
+      "action_url": "/parent/documents",
+      "created_at": "2026-10-16T12:54:34.907Z"
+    },
+    {
+      "id": 1792135444636,
+      "user_id": 1792135235649,
+      "title": "Class Timetable Updated",
+      "message": "The weekly timetable for Grade 1 has been updated by the administration. Check the Timetable tab in your app.",
+      "type": "Timetable",
+      "is_read": 0,
+      "action_url": "/timetable",
+      "created_at": "2026-10-16T07:24:04.319Z"
+    },
+    {
+      "id": 1792135444654,
+      "user_id": 1792105809418,
+      "title": "Class Timetable Updated",
+      "message": "The weekly timetable for Grade 1 has been updated by the administration. Check the Timetable tab in your app.",
+      "type": "Timetable",
+      "is_read": 0,
+      "action_url": "/timetable",
+      "created_at": "2026-10-16T07:24:04.319Z"
+    },
+    {
+      "id": 1792135444426,
+      "user_id": 1792104861339,
+      "title": "Class Timetable Updated",
+      "message": "The weekly timetable for Grade 1 has been updated by the administration. Check the Timetable tab in your app.",
+      "type": "Timetable",
+      "is_read": 0,
+      "action_url": "/timetable",
+      "created_at": "2026-10-16T07:24:04.319Z"
+    },
+    {
+      "id": 1792101171904,
+      "user_id": 1792096678054,
+      "title": "Official Document Issued",
+      "message": "Official Detailed Marks Certificate has been issued for Roman zaman. It is now available in your portal and mobile app.",
+      "type": "Document",
+      "is_read": 0,
+      "action_url": "/parent/documents",
+      "created_at": "2026-10-15T21:52:51.903Z"
+    },
+    {
+      "id": 1792101168109,
+      "user_id": 1792096678054,
+      "title": "Official Document Issued",
+      "message": "Official School Leaving Certificate has been issued for Roman zaman. It is now available in your portal and mobile app.",
+      "type": "Document",
+      "is_read": 0,
+      "action_url": "/parent/documents",
+      "created_at": "2026-10-15T21:52:48.108Z"
+    },
+    {
+      "id": 1792101163567,
+      "user_id": 1792096678054,
+      "title": "Official Document Issued",
+      "message": "Official Student ID Card has been issued for Roman zaman. It is now available in your portal and mobile app.",
+      "type": "Document",
+      "is_read": 0,
+      "action_url": "/parent/documents",
+      "created_at": "2026-10-15T21:52:43.566Z"
+    },
+    {
+      "id": 1792101157455,
+      "user_id": 1792096678054,
+      "title": "Official Document Issued",
+      "message": "Official Birth Certificate has been issued for Roman zaman. It is now available in your portal and mobile app.",
+      "type": "Document",
+      "is_read": 0,
+      "action_url": "/parent/documents",
+      "created_at": "2026-10-15T21:52:37.454Z"
+    },
+    {
+      "id": 1792094644817,
+      "user_id": 1792093262081,
+      "title": "Official Document Issued",
+      "message": "Official School Leaving Certificate has been issued for Roman zaman. It is now available in your portal and mobile app.",
+      "type": "Document",
+      "is_read": 0,
+      "action_url": "/parent/documents",
+      "created_at": "2026-10-15T20:04:04.816Z"
+    }
+  ],
+  "settings": {
+    "schoolName": "Highlight Model School",
+    "tagline": "Better Learning | Brighter Future",
+    "academicYear": "2025-2026",
+    "defaultPort": 4370,
+    "schoolStartTime": "08:00",
+    "schoolEndTime": "14:00",
+    "lateThreshold": "08:30",
+    "notificationsEnabled": true,
+    "whatsappGatewayUrl": "",
+    "whatsappToken": "",
+    "whatsappInstanceId": "",
+    "whatsappAutoSend": true,
+    "whatsappSenderPhone": "+92 300 1234567",
+    "whatsappProviderName": "Direct WhatsApp Gateway"
+  },
+  "punches": [],
+  "student_registrations": [
+    {
+      "id": 1792156405040,
+      "serial_no": "SR-9607",
+      "date_of_admission": "2026-10-16",
+      "student_name": "Roman",
+      "student_name_urdu": "",
+      "father_name": "Khalid",
+      "father_name_urdu": "",
+      "email": "romanzaman23@gmail.com",
+      "phone": "0300-1234567",
+      "password_hash": "$2a$10$D5EHfuzW5vyQgZWsWaFIAeFUROW08kyHdbpvK/QcL44/NdWdNU8QC",
+      "class_name": "Grade 1",
+      "gender": "Male",
+      "date_of_birth": "10/03/2018",
+      "dob_words": "",
+      "caste_tribe": "",
+      "father_occupation": "",
+      "residence": "Highlight Model School Area, Islamabad",
+      "address": "Highlight Model School Area, Islamabad",
+      "arrears_due": "0",
+      "class_withdrawn": "",
+      "withdrawal_date": "",
+      "remarks": "",
+      "student_type": "Fresh / New Student",
+      "prev_school": "Highlight Junior Wing (Fresh Admission)",
+      "avatar_url": "/uploads/student_avatar_1792156410934_1792156469549.jpg",
+      "photo_url": "/uploads/student_avatar_1792156410934_1792156469549.jpg",
+      "source": "Mobile App",
+      "status": "APPROVED",
+      "applied_date": "2026-10-16 13:13",
+      "rejection_reason": null,
+      "approved_at": "2026-10-16 13:13",
+      "assigned_roll_no": "HMS-679"
+    }
+  ],
+  "timetables": [
+    {
+      "id": 1,
+      "class_id": 3,
+      "class_name": "Grade 1",
+      "updated_at": "2026-10-16T12:55:30.254Z",
+      "updated_by": "Admin Principal",
+      "schedule": {
+        "Monday": [
+          {
+            "id": 1,
+            "period": "Period 1",
+            "time": "08:00 - 08:45 AM",
+            "subject": "Mathematics",
+            "teacher": "Sir Tariq",
+            "room": "Room 103"
+          },
+          {
+            "id": 2,
+            "period": "Period 2",
+            "time": "08:45 - 09:30 AM",
+            "subject": "English Language",
+            "teacher": "Ms. Ayesha",
+            "room": "Room 103"
+          },
+          {
+            "id": 3,
+            "period": "Period 3",
+            "time": "09:30 - 10:15 AM",
+            "subject": "Urdu",
+            "teacher": "Ms. Fatima",
+            "room": "Room 103"
+          },
+          {
+            "id": 4,
+            "period": "Break / Recess",
+            "time": "10:15 - 10:45 AM",
+            "subject": "Recess & Refreshment",
+            "teacher": "Duty Staff",
+            "room": "School Ground",
+            "isBreak": true
+          },
+          {
+            "id": 5,
+            "period": "Period 4",
+            "time": "10:45 - 11:30 AM",
+            "subject": "General Science",
+            "teacher": "Sir Farman",
+            "room": "Room 103"
+          },
+          {
+            "id": 6,
+            "period": "Period 5",
+            "time": "11:30 - 12:15 PM",
+            "subject": "Islamiat",
+            "teacher": "Qari Usman",
+            "room": "Room 103"
+          },
+          {
+            "id": 7,
+            "period": "Period 6",
+            "time": "12:15 - 01:00 PM",
+            "subject": "Computer Studies",
+            "teacher": "Sir Roman",
+            "room": "Computer Lab"
+          },
+          {
+            "id": 1792155322048,
+            "period": "Period 8",
+            "time": "08:00 - 08:45 AM",
+            "subject": "General Science",
+            "teacher": "Sir Farman",
+            "room": "Room 103",
+            "isBreak": false
+          }
+        ],
+        "Tuesday": [
+          {
+            "id": 1,
+            "period": "Period 1",
+            "time": "08:00 - 08:45 AM",
+            "subject": "English Language",
+            "teacher": "Ms. Ayesha",
+            "room": "Room 103"
+          },
+          {
+            "id": 2,
+            "period": "Period 2",
+            "time": "08:45 - 09:30 AM",
+            "subject": "Mathematics",
+            "teacher": "Sir Tariq",
+            "room": "Room 103"
+          },
+          {
+            "id": 3,
+            "period": "Period 3",
+            "time": "09:30 - 10:15 AM",
+            "subject": "Social Studies",
+            "teacher": "Ms. Sadia",
+            "room": "Room 103"
+          },
+          {
+            "id": 4,
+            "period": "Break / Recess",
+            "time": "10:15 - 10:45 AM",
+            "subject": "Recess & Refreshment",
+            "teacher": "Duty Staff",
+            "room": "School Ground",
+            "isBreak": true
+          },
+          {
+            "id": 5,
+            "period": "Period 4",
+            "time": "10:45 - 11:30 AM",
+            "subject": "General Science",
+            "teacher": "Sir Farman",
+            "room": "Room 103"
+          },
+          {
+            "id": 6,
+            "period": "Period 5",
+            "time": "11:30 - 12:15 PM",
+            "subject": "Urdu Literature",
+            "teacher": "Ms. Fatima",
+            "room": "Room 103"
+          },
+          {
+            "id": 7,
+            "period": "Period 6",
+            "time": "12:15 - 01:00 PM",
+            "subject": "Arts & Crafts",
+            "teacher": "Ms. Hina",
+            "room": "Art Room"
+          }
+        ],
+        "Wednesday": [
+          {
+            "id": 1,
+            "period": "Period 1",
+            "time": "08:00 - 08:45 AM",
+            "subject": "Mathematics",
+            "teacher": "Sir Tariq",
+            "room": "Room 103"
+          },
+          {
+            "id": 2,
+            "period": "Period 2",
+            "time": "08:45 - 09:30 AM",
+            "subject": "General Science",
+            "teacher": "Sir Farman",
+            "room": "Room 103"
+          },
+          {
+            "id": 3,
+            "period": "Period 3",
+            "time": "09:30 - 10:15 AM",
+            "subject": "English Grammar",
+            "teacher": "Ms. Ayesha",
+            "room": "Room 103"
+          },
+          {
+            "id": 4,
+            "period": "Break / Recess",
+            "time": "10:15 - 10:45 AM",
+            "subject": "Recess & Refreshment",
+            "teacher": "Duty Staff",
+            "room": "School Ground",
+            "isBreak": true
+          },
+          {
+            "id": 5,
+            "period": "Period 4",
+            "time": "10:45 - 11:30 AM",
+            "subject": "Islamiat",
+            "teacher": "Qari Usman",
+            "room": "Room 103"
+          },
+          {
+            "id": 6,
+            "period": "Period 5",
+            "time": "11:30 - 12:15 PM",
+            "subject": "Urdu",
+            "teacher": "Ms. Fatima",
+            "room": "Room 103"
+          },
+          {
+            "id": 7,
+            "period": "Period 6",
+            "time": "12:15 - 01:00 PM",
+            "subject": "Library & Reading",
+            "teacher": "Mr. Asad",
+            "room": "School Library"
+          }
+        ],
+        "Thursday": [
+          {
+            "id": 1,
+            "period": "Period 1",
+            "time": "08:00 - 08:45 AM",
+            "subject": "Social Studies",
+            "teacher": "Ms. Sadia",
+            "room": "Room 103"
+          },
+          {
+            "id": 2,
+            "period": "Period 2",
+            "time": "08:45 - 09:30 AM",
+            "subject": "English Language",
+            "teacher": "Ms. Ayesha",
+            "room": "Room 103"
+          },
+          {
+            "id": 3,
+            "period": "Period 3",
+            "time": "09:30 - 10:15 AM",
+            "subject": "Mathematics",
+            "teacher": "Sir Tariq",
+            "room": "Room 103"
+          },
+          {
+            "id": 4,
+            "period": "Break / Recess",
+            "time": "10:15 - 10:45 AM",
+            "subject": "Recess & Refreshment",
+            "teacher": "Duty Staff",
+            "room": "School Ground",
+            "isBreak": true
+          },
+          {
+            "id": 5,
+            "period": "Period 4",
+            "time": "10:45 - 11:30 AM",
+            "subject": "General Science",
+            "teacher": "Sir Farman",
+            "room": "Science Lab"
+          },
+          {
+            "id": 6,
+            "period": "Period 5",
+            "time": "11:30 - 12:15 PM",
+            "subject": "Computer Studies",
+            "teacher": "Sir Roman",
+            "room": "Computer Lab"
+          },
+          {
+            "id": 7,
+            "period": "Period 6",
+            "time": "12:15 - 01:00 PM",
+            "subject": "Physical Education (PT)",
+            "teacher": "Coach Bilal",
+            "room": "Sports Ground"
+          }
+        ],
+        "Friday": [
+          {
+            "id": 1,
+            "period": "Period 1",
+            "time": "08:00 - 08:40 AM",
+            "subject": "Holy Quran & Hadith",
+            "teacher": "Qari Usman",
+            "room": "Room 103"
+          },
+          {
+            "id": 2,
+            "period": "Period 2",
+            "time": "08:40 - 09:20 AM",
+            "subject": "Mathematics",
+            "teacher": "Sir Tariq",
+            "room": "Room 103"
+          },
+          {
+            "id": 3,
+            "period": "Period 3",
+            "time": "09:20 - 10:00 AM",
+            "subject": "English",
+            "teacher": "Ms. Ayesha",
+            "room": "Room 103"
+          },
+          {
+            "id": 4,
+            "period": "Break / Recess",
+            "time": "10:00 - 10:20 AM",
+            "subject": "Quick Refreshment",
+            "teacher": "Duty Staff",
+            "room": "School Ground",
+            "isBreak": true
+          },
+          {
+            "id": 5,
+            "period": "Period 4",
+            "time": "10:20 - 11:00 AM",
+            "subject": "General Knowledge",
+            "teacher": "Ms. Fatima",
+            "room": "Room 103"
+          },
+          {
+            "id": 6,
+            "period": "Period 5",
+            "time": "11:00 - 11:45 AM",
+            "subject": "Moral Education & Ethics",
+            "teacher": "Sir Farman",
+            "room": "Room 103"
+          }
+        ],
+        "Saturday": [
+          {
+            "id": 1,
+            "period": "Period 1",
+            "time": "08:00 - 08:45 AM",
+            "subject": "Spoken English & Public Speaking",
+            "teacher": "Ms. Ayesha",
+            "room": "Room 103"
+          },
+          {
+            "id": 2,
+            "period": "Period 2",
+            "time": "08:45 - 09:30 AM",
+            "subject": "Sports & Physical Fitness",
+            "teacher": "Coach Bilal",
+            "room": "Main Ground"
+          },
+          {
+            "id": 3,
+            "period": "Period 3",
+            "time": "09:30 - 10:15 AM",
+            "subject": "Robotics & Practical Science",
+            "teacher": "Sir Roman",
+            "room": "Computer Lab"
+          },
+          {
+            "id": 4,
+            "period": "Break / Recess",
+            "time": "10:15 - 10:45 AM",
+            "subject": "Recess & Refreshment",
+            "teacher": "Duty Staff",
+            "room": "School Ground",
+            "isBreak": true
+          },
+          {
+            "id": 5,
+            "period": "Period 4",
+            "time": "10:45 - 11:30 AM",
+            "subject": "Weekly Quiz & Review",
+            "teacher": "Sir Tariq",
+            "room": "Room 103"
+          },
+          {
+            "id": 6,
+            "period": "Period 5",
+            "time": "11:30 - 12:15 PM",
+            "subject": "Calligraphy & Drawing",
+            "teacher": "Ms. Hina",
+            "room": "Art Studio"
+          }
+        ]
+      }
+    }
+  ]
+}
